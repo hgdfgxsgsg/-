@@ -4440,24 +4440,4 @@ if(message.channel.type === "dm") return;
 }
  });
 
-
-
-  client.on('messageUpdate', (oldRebel, newRebel) => {
-    console.log("عصو مآ يحآول التعديل.");
-   if (newRebel.content.toUpperCase().match(/DISCORD.GG/i))
-    {
-        console.log(newRebel.author.name + " حاول النشر عبر تعديل الرسآلة - " + newRebel);
-           newRebel.delete().catch(O_o=>{}); 
-           newRebel.author.send("ممنوع روآبط الدسكورد. \n إذآ كنت تريد النشر توآصل من الإدآرة.");
-    }
-});
-  
-
-
-
-
-
-
-
-
 client.login(process.env.BOT_TOKEN);
